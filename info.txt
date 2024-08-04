@@ -1,0 +1,34 @@
+medi-connect/
+│
+├── public/
+│   └── index.html          # Main HTML file
+│
+├── src/
+│   ├── assets/             # Images, fonts, etc.
+│   │   └── styles/         # Global styles
+│   │       └── variables.css
+│   ├── components/         # Reusable components
+│   │   ├── UI/             # UI components like buttons, inputs, etc.
+│   │   ├── Layout/         # Layout components like headers, footers, etc.
+│   │   └── ...             # Other domain-specific components
+│   ├── features/           # Features or domain-specific functionality
+│   │   ├── appointments/   # Appointment management
+│   │   ├── patients/       # Patient management
+│   │   ├── providers/      # Provider management
+│   │   ├── auth/           # Authentication and user management
+│   │   └── ...             # Other features
+│   ├── hooks/              # Custom React hooks
+│   ├── contexts/           # React context providers
+│   ├── services/           # API calls, business logic
+│   ├── store/              # Global state management (e.g., Redux)
+│   ├── pages/              # Page components (route components)
+│   ├── routes/             # App routing
+│   ├── utils/              # Utility functions
+│   ├── App.jsx             # Main app component
+│   ├── main.jsx            # Entry point
+│   └── index.css           # Global CSS
+│
+├── .env                    # Environment variables
+├── .gitignore              # Files to ignore in version control
+├── package.json            # Project dependencies and scripts
+└── vite.config.js          # Vite configuration
