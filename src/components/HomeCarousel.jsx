@@ -1,7 +1,10 @@
-import React from 'react';
-import { Carousel, Button } from 'react-bootstrap';
-
+import React from "react";
+import { Carousel, Button } from "react-bootstrap";
+import CustomButton from "./Custom-Componenets/CustomButton";
+import CommonPopUp from "./Custom-Componenets/CommonPopUp";
+import { useState } from "react";
 const HomeCarousel = () => {
+  const [show, setShow] = useState(false);
   return (
     // <Carousel fade className="home-carousel">
     //   {/* <Carousel.Item interval={5000}>
@@ -30,10 +33,34 @@ const HomeCarousel = () => {
     //   </Carousel.Item>
     // </Carousel>
     <div className="header-image">
-      <img src="../../../public/images/slide-1.png" alt="First slide" className='w-100' />  
+      <img
+        src="../../../public/images/slide-1.png"
+        alt="First slide"
+        className="w-100"
+      />
       <div className="header-image-appointment-container">
-      <Button variant="primary">Make An Appointment</Button>
-
+        {/* <Button variant="primary">Make An Appointment</Button>
+         */}
+        <CommonPopUp
+          show={show}
+          heading={"Successfull!"}
+          content="Successfully done"
+          handleClose={() => {
+            setShow(false);
+          }}
+          onClick={() => {
+            setShow(false);
+          }}
+          // submitBtn={"Save changes"}
+        />
+        <CustomButton
+          primary={true}
+          type="registered"
+          name="Appointment"
+          onClick={() => {
+            setShow(true);
+          }}
+        />
       </div>
     </div>
   );

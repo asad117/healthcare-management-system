@@ -1,26 +1,53 @@
 :root {
   --primary-color: #0d6efd; /* Blue */
   --secondary-color: #28A745; /* Green */
-  --accent-color: #17A2B8; /* Light Blue/Cyan */
+  --accent-color-light:#14967f; /* Light Blue/Cyan */
+  --accent-color-dark:#14967f;/* Light Blue/Cyan */
 
-  --background-color-light: #ffffff; /* White */
-  --background-color-dark: #121212; /* Dark Gray */
+  --background-color: #e2fcd6;
+  --color: #095d7e;
+  --background-color-light: #e2fcd6; /* light green */
+  --background-color-dark:  #095d7e; 
 
-  --text-color-light: #212529; /* Dark Gray for Light Theme */
-  --text-color-dark: #E1E1E1; /* Light Gray for Dark Theme */
+  --text-color-light: #095d7e;
+  --text-color-dark:#e2fcd6; 
+
+  --primary-btn-light:#14967f;
+  --primary-btn-dark:#ccecee;
+
+  --secondary-btn-light: #095d7e;
+  --secondary-btn-dark: #f1f9ff;
+
 
   --header-height: 60px;
   --header-padding: 0 20px;
+  --header-background-color-light: #f1f9ff ;
+  --header-background-color-dark: #095d7e ;
+
+  
+  --footer-background-color-light:#ccecee ;
+  --footer-background-color-dark:  #14967f 
+  ;
+
 }
 
 [data-theme='light'] {
   --background-color: var(--background-color-light);
   --text-color: var(--text-color-light);
+  --accent-color: var(--accent-color-light)
+  --header-background: var(--header-background-color-light)
+  --primary-btn: var(--primary-btn-light)
+  --secondary-btn: var(--secondary-btn-light)
+  
 }
 
 [data-theme='dark'] {
   --background-color: var(--background-color-dark);
   --text-color: var(--text-color-dark);
+  --accent-color: var(var(--accent-color-dark))
+  --header-background: var(--header-background-color-dark)
+  --primary-btn: var(--primary-btn-dark)
+  --secondary-btn: var(--secondary-btn-dark)
 }
 
 body {
@@ -29,18 +56,19 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* .header {
+.header {
   height: var(--header-height);
   padding: var(--header-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: var(--header-background);
+  color:var(--text-color);
+  margin-left: auto;
 }
 
 .header a {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
   margin-right: 15px;
 }
